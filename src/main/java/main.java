@@ -12,9 +12,9 @@ public class main {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         //Инициализация переменных
-        int N = 0;
-        int C = 0;
-        int C1 = 0;
+        int N;
+        int C;
+        int C1;
         //Создаем список игроков, т.е. активируем динамический массив с объектами класса Player
         // для начала зададим максимально возможное число игроков-40
         ArrayList<Player> players = new ArrayList<>(40);
@@ -53,7 +53,6 @@ public class main {
             if (l.equals("get-cards")) {
                 C1 = Integer.parseInt(console.next())-1;
                 players.trimToSize();
-                System.out.println(players.size());
                 //Если ввели число большее чем количесво игроков выход с сообшением
                 if (C1+1> players.size()){
                     System.out.println("Нет такого игрока");
